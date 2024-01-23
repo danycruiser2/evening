@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiddy Jokar</title>
+</head>
+<body>
+<div class="back-img"></div>
+<div class="container">
+
+  <h1 class="mt-5" id="title" style="text-align:center; color:#f8f8f8">FreeCodeCamp Survey Form</h1>
+  <p class="mb-4" id="description" style="text-align:center; color:#f4f4f4;font-size:20px">Become an awesome web developer!</p>
+
+  <form id="survey-form">
+    <h2 class="mb-4">Acme Web Development School Survey Form</h2>
+    <div class="form-group">
+      <label id="name-label" for="name">Name*</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter your name" ,required>
+      <div class="invalid-feedback">Name is required</div>
+    </div>
+
+    <div class="form-group">
+      <label id="email-label" for="email">Email*</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter your email" ,required>
+      <div class="invalid-feedback">A valid email is required</div>
+    </div>
+
+    <div class="form-group">
+      <label id="number-label" for="number">Phone*</label>
+      <input type="number" class="form-control" id="number" placeholder="Enter your phone number" pattern="^\d{10}$" min="10" max="10" required>
+      <div class="invalid-feedback">Phone number is required</div>
+    </div>
+
+    <!-- Dropdown -->
+    <h4 class="mt-5" style="font-size:18px">What best describes your current role?</h4>
+    <div class="form-group" id="dropdown ">
+      <select class="custom-select" required>
+        <option value="1">I am</option>
+        <option value="2">Coding as a hobby</option>
+        <option value="3">Studying in my free time</option>
+        <option value="4">Developing more skills for employment</option>
+        <option value="5">Developing skills to get employment</option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+
+    <!-- Radio Buttons -->
+    <h4 style="font-size:18px" class="mt-5">How likely is that you will complete this course?</h4>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" value="1" required>
+      <label class="custom-control-label" for="customControlValidation2">Definitley</label>
+    </div>
+    <div class="custom-control custom-radio mb-3">
+      <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" value="2" required>
+      <label class="custom-control-label" for="customControlValidation3">Maybe</label>
+
+      <div class="invalid-feedback">More example invalid feedback text</div>
+    </div>
+    <!-- Dropdown -->
+    <h4 style="font-size:18px" class="mt-5">What JavaScript frame-works most interest you?</h4>
+    <div class="form-group" id="dropdown">
+      <select class="custom-select" required>
+        <option value="1">Frame-works</option>
+        <option value="2">Angular</option>
+        <option value="3">React</option>
+        <option value="4">Ember</option>
+        <option value="5">Meteor</option>
+        <option value="6">Vue</option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+    <h4 style="font-size:18px" class="mt-5">What back-end technologies most interest you?</h4>
+    <div class="form-group" id=" dropdown">
+      <select class="custom-select" required>
+        <option value="1">Back-ends</option>
+        <option value="2">MongoDB</option>
+        <option value="3">MySql</option>
+        <option value="4">Firebase</option>
+        <option value="5">Python</option>
+        <option value="6">PHP</option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+
+    <h4 style="font-size:18px" class="mt-5">What CSS Frame-works most interest you?</h4>
+    <div class="form-group" id="dropdown">
+      <select class="custom-select" required>
+        <option value="1">CSS frame-works</option>
+        <option value="2">Bootstrap 4</option>
+        <option value="3">Materialize</option>
+        <option value="4">Foundation 6</option>
+        <option value="5">MD-Bootstrap</option>
+        <option value="6">Bulma</option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+
+    <!-- Checkboxes -->
+    <div class="form-group">
+      <h4 style="font-size:18px" class="mt-5">Subjects that you would like added to this curriculum?</h4>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+        Ionic Mobile Development
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option2" aria-label="...">
+        NativeScript Mobile Development
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option3" aria-label="...">
+        MEAN Stack
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option4" aria-label="...">
+        LAMP Stack
+      </div>
+      <div class="form-check">
+        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option5" aria-label="...">
+        WordPress Theme & Plugin Development
+      </div>
+    </div>
+    <!-- Texarea -->
+    <div>
+      <h4 style="font-size:16px" class="mt-5">Comments or Suggestions?</h4>
+      <textarea id="comments" class="input-field" style="height:80px; width:100%;" name="comment" placeholder="Enter your comment here..."></textarea>
+    </div>
+
+    <!-- Subsbribe -->
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" value="1">
+      <label class="form-check-label" for="exampleCheck1">Subscribe to mail list</label>
+    </div>
+
+    <button id="submit" type="submit" class="btn" style="background-color:#12c9b4; color:#fff; border-radius:0;">Submit</button>
+  </form>
+</div>
+<div class="container" style="text-align:center;">
+  <iframe class="mt-4" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fewebdesigns%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden"></iframe>
+</div>
+</body>
+</html>
